@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Purge old versions of files" 
+
+echo rm *~
+     rm *~
+
+echo rm *.pyc
+     rm *.pyc
+
+echo "Done ..."

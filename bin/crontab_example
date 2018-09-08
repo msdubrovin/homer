@@ -1,0 +1,36 @@
+56 * * * * ~/bin/cron_script_1h.sh # run it 56 min past every hour
+#0 * * * * ~/bin/cron_script_1h.sh # run it every hour
+#* * * * * date > ~/test_crontab_1min  # run it every minute 
+#*/10 * * * * date > ~/test_crontab_10min  # run it every 10 minutes 
+#0 * * * * date > ~/test_crontab_1hour # run it every hour
+#* * * * * <command> #Runs every minute (min, hour, day, month, day of week)
+#30 * * * * <command> #Runs at 30 minutes past the hour
+#45 6 * * * <command> #Runs at 6:45 am every day
+#45 18 * * * <command> #Runs at 6:45 pm every day
+#00 1 * * 0 <command> #Runs at 1:00 am every Sunday
+#00 1 * * 7 <command> #Runs at 1:00 am every Sunday
+#00 1 * * Sun <command> #Runs at 1:00 am every Sunday
+#30 8 1 * * <command> #Runs at 8:30 am on the first day of every month
+#00 0-23/2 02 07 * <command> #Runs every other hour on the 2nd of July
+# >/dev/null 2>&1 # is used to disable email notification
+#* * * * * ls -l >/dev/null 2>&1
+#
+#
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# This script can be installed by the command
+# crontab crontab_example     # starts crontab
+# sudo crontab -n psanaphi105 # select cluster host to run it    
+# psexport is most stable and re-booted quickly.
+#
+# List installed crontab
+# crontab -l
+#
+# Uninstall:
+# crontab -r
+#
+# see % man crontab
+#
+# Altenatively scripts from
+# /etc/cron.d/
+# are executed automatically
+# schedulling line is inside
